@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Checkup - Diabetes Risk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Diabetes Risk Check</h1>
+    <p class="sub">Enter your health values. Leave a box empty if you don't know it.</p>
+
+    <div class="grid">
+      <div><label>Pregnancies</label><input id="Pregnancies" type="number" min="0" placeholder="e.g. 2"></div>
+      <div><label>Age <span class="hint">(years)</span></label><input id="Age" type="number" min="1" placeholder="e.g. 45"></div>
+      <div><label>Glucose <span class="hint">(mg/dL)</span></label><input id="Glucose" type="number" min="0" placeholder="e.g. 140"></div>
+      <div><label>Blood Pressure <span class="hint">(diastolic, mm Hg)</span></label><input id="BloodPressure" type="number" min="0" placeholder="e.g. 80"></div>
+      <div><label>Skin Thickness <span class="hint">(mm)</span></label><input id="SkinThickness" type="number" min="0" placeholder="e.g. 30"></div>
+      <div><label>Insulin <span class="hint">(mu U/ml)</span></label><input id="Insulin" type="number" min="0" placeholder="e.g. 100"></div>
+      <div><label>BMI</label><input id="BMI" type="number" min="0" step="0.1" placeholder="e.g. 32.5"></div>
+      <div><label>Diabetes Pedigree <span class="hint">(family history score)</span></label><input id="DiabetesPedigreeFunction" type="number" min="0" step="0.001" value="0.5"></div>
+    </div>
+
+    <button id="btn" onclick="checkRisk()">Check my risk</button>
+
+    <div id="result"></div>
+
+    <p class="disclaimer">This is a screening aid for learning purposes, not a medical diagnosis. Please consult a doctor for any health concern.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
